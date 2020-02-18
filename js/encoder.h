@@ -72,6 +72,10 @@ public:
             double decimal = value->NumberValue(Nan::GetCurrentContext()).FromJust();
             ret = erlpack_append_double(&pk, decimal);
         }
+        else if (value->IsBigInt()) {
+            auto ll = (long long) value.As<v8::BigInt>()->Int64Value();
+            ret = erlpack_append_long_long(&pk, ll);
+        }
         else if (value->IsNull() || value->IsUndefined()) {
             ret = erlpack_append_nil(&pk);
         }
