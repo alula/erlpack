@@ -82,10 +82,10 @@ public:
         else if (value->IsTrue()) {
             ret = erlpack_append_true(&pk);
         }
-        else if(value->IsFalse()) {
+        else if (value->IsFalse()) {
             ret = erlpack_append_false(&pk);
         }
-        else if(value->IsString()) {
+        else if (value->IsString()) {
             Nan::Utf8String string(value);
             ret = erlpack_append_binary(&pk, *string, string.length());
         }

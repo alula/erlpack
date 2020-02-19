@@ -13,7 +13,7 @@ Erlpack is a fast encoder and decoder for the Erlang Term Format (version 131) f
 - [X] Unicode Strings
 - [X] Floats
 - [X] Integers
-- [ ] Longs
+- [X] Longs
 - [ ] Longs over 64 bits
 - [X] Objects
 - [X] Arrays
